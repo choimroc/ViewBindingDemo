@@ -30,11 +30,13 @@ public final class ActivityMainBinding implements ViewBinding<ActivityMainBindin
         return new ActivityMainBinding();
     }
 
+    @NonNull
     @Override
     public ActivityMainBinding inflate(@NonNull LayoutInflater inflater) {
         return inflate(inflater, null, false);
     }
 
+    @NonNull
     @Override
     public ActivityMainBinding inflate(@NonNull LayoutInflater inflater,
                                        @Nullable ViewGroup parent, boolean attachToParent) {

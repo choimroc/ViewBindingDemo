@@ -35,11 +35,13 @@ public final class ActivityBaseBinding implements ViewBinding<ActivityBaseBindin
         return new ActivityBaseBinding();
     }
 
+    @NonNull
     @Override
     public ActivityBaseBinding inflate(@NonNull LayoutInflater inflater) {
         return inflate(inflater, null, false);
     }
 
+    @NonNull
     @Override
     public ActivityBaseBinding inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent, boolean attachToParent) {
         View root = inflater.inflate(R.layout.activity_base, parent, false);
