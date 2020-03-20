@@ -3,7 +3,6 @@ package com.choimroc.example;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -23,11 +22,8 @@ public final class ActivityBaseBinding implements ViewBinding<ActivityBaseBindin
     public Toolbar toolbar;
 
     @NonNull
-    public FrameLayout viewContainer;
-
-    @NonNull
     @Override
-    public View getRoot() {
+    public LinearLayout getRoot() {
         return rootView;
     }
 
@@ -63,15 +59,9 @@ public final class ActivityBaseBinding implements ViewBinding<ActivityBaseBindin
                 missingId = "toolbar";
                 break missingId;
             }
-            FrameLayout viewContainer = rootView.findViewById(R.id.view_container);
-            if (viewContainer == null) {
-                missingId = "viewContainer";
-                break missingId;
-            }
 
             this.rootView = (LinearLayout) rootView;
             this.toolbar = toolbar;
-            this.viewContainer = viewContainer;
             return this;
         }
         throw new NullPointerException("Missing required view with ID: ".concat(missingId));

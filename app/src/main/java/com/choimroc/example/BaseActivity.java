@@ -24,7 +24,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
             e.printStackTrace();
             throw new RuntimeException("create BaseActivity error");
         }
-        viewBinding.inflate(getLayoutInflater(), baseBinding.viewContainer, true);
+        viewBinding.inflate(getLayoutInflater(),  baseBinding.getRoot(), true);
     }
 
     protected abstract Class<T> getViewBinding();
